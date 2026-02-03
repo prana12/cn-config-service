@@ -6,6 +6,14 @@ on:
     branches: main
 concurrency: acceptance
 
+env:
+  OWNER: prana12
+  REGISTRY: ghcr.io
+#  APP_REPO: cn-config-service
+  DEPLOY_REPO: cn-polar-deployment
+  VERSION: ${{ github.sha }}
+  APP_NAME: config-service
+
 jobs:
   functional:
     name: Functional Acceptance Tests
